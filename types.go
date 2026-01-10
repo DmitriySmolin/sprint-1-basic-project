@@ -1,18 +1,18 @@
 package main
 
 // Stock — остатки ингредиентов
-type Stock map[string] int
+type Stock map[string]int
 
 // Recipe — рецепт напитка
 type Recipe struct {
-	Price int
-	Ingredients map[string] int
-	Steps []string
+	Price       int
+	Ingredients map[string]int
+	Steps       []string
 }
 
 // Stats — статистика продаж
 type Stats struct {
-	Orders int
+	Orders  int
 	Revenue int
 }
 

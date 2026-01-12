@@ -24,4 +24,7 @@ func main() {
 		pp.Println("Ошибка:", err)
 	}
 
+	machine.Menu()
+	machine.GetStats()
+
 }

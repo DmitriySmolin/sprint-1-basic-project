@@ -2,6 +2,12 @@ package main
 
 import "fmt"
 
+func (m *Machine) Menu() {
+	for _, name := range recipeOrder {
+		fmt.Printf("%s %d\n", name, m.Recipes[name].Price)
+	}
+}
+
 func (m *Machine) GetStock() {
 	for _, ing := range ingredientOrder {
 		fmt.Printf("%s=%d\n", ing, m.Stock[ing])
@@ -54,4 +60,8 @@ func (m *Machine) Brew(drink string, payment int) error {
 	}
 
 	return nil
+}
+
+func (m *Machine) GetStats() {
+	fmt.Printf("orders=%d revenue=%d\n", m.Stats.Orders, m.Stats.Revenue)
 }

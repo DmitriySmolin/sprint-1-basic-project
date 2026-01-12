@@ -13,5 +13,15 @@ func main() {
 	// pp.Println(machine)
 
 	machine.SetStock("water", 3)
-	pp.Println(machine)
+	// pp.Println(machine)
+
+	machine.AddStock("beans", 10)
+	machine.AddStock("water", 50)
+
+	// Варим espresso с оплатой 150
+	err := machine.Brew("espresso", 150)
+	if err != nil {
+		pp.Println("Ошибка:", err)
+	}
+
 }

@@ -21,3 +21,10 @@ type State struct {
 	Stock Stock `json:"stock"`
 	Stats Stats `json:"stats"`
 }
+
+// Machine — кофемашина
+type Machine struct {
+	Stock   Stock
+	Recipes map[string]Recipe
+	Stats   Stats
+}
